@@ -1,0 +1,137 @@
+.conteiner{
+    color: #2F204F;
+    display: flex;
+    justify-content: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;   
+
+}
+  
+
+.title{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 800;
+    color: #2F204F;
+    border-bottom: 1px solid rgb(201, 200, 200);
+
+}
+.form{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    color: #2F204F;
+    
+   
+}
+.warning{
+    width: 140px;
+    height: 20px;
+    border-bottom: 1px solid #DE2027;
+    border-left:0;
+    border-right: 0;
+    border-top: 0;
+    margin-left: 20px;
+    outline: none;
+    background-color: #F7F7F9;
+    font-family: "Quicksand", sans-serif;
+    font-weight:400;
+    
+    color: #2F204F;
+    font-size: 15px;
+    text-align: center;
+  
+
+  
+}
+.inputDiv{
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+
+
+
+}
+.label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    padding-left: 20px;
+
+}
+
+.input{
+    width: 140px;
+    height: 20px;
+    border-bottom: 1px solid rgb(201, 200, 200);
+    border-left:0;
+    border-right: 0;
+    border-top: 0;
+    margin-left: 20px;
+    outline: none;
+    background-color: #F7F7F9;
+    font-family: "Quicksand", sans-serif;
+    font-weight:400;
+    
+    color: #2F204F;
+    font-size: 15px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+  
+}
+.error{
+    font-size: 12px;
+    font-family: "Quicksand", sans-serif;
+    font-weight:500;
+    margin-left: 20px;
+    font-style: italic;
+    color: #DE2027;
+}
+
+
+.img{
+    width: 500px;
+    border-radius: 50px;
+}
+ 
+    
+
+.button{
+   
+    width: 75px ;
+    height: 20px;
+    border: 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    background-color: #F7F7F9;
+    padding-right: 10px;
+   text-align: right;
+    border-right: 1px solid #2f204f92;;
+  
+}
+.divButton{
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+    margin-left: 10px;
+
+}
+
+
+
+/*
+background-color:#2F204F;
+color:  #EDEDEF;
+width: 85px ;
+height: 35px;
+border: 0;
+border-radius: 15px;
+font-family: "Quicksand", sans-serif;
+font-weight: 400;
+*/

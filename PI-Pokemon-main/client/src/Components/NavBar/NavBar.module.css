@@ -1,0 +1,57 @@
+.conteiner{
+    width: 1200px;
+    margin-top: 60px;
+    margin-bottom:70px;
+  
+    height: 50px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+    
+    
+}
+
+
+.navRotes{
+   
+    width: 200px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+  
+}
+
+
+.navLinksImg{
+    width: 35px;
+
+}
+
+
+.img{
+    width: 150px;
+}
+
+.conteinerLinks{
+    width: 430px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.navLinks{
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+   
+
+}
