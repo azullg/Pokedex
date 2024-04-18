@@ -23,7 +23,7 @@ function Form(){
         speed: '',
         weight: '',
         height: '',
-        types: [],
+       
     })
 
 

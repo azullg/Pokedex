@@ -87,6 +87,7 @@ function  HomePAge () {
                     <option value="All">All</option>
                     <option value="Api">PokeApi</option>
                     <option value="Created">Created</option>
+                    
                 </select>
                 <select onChange={e => handleFilterByType(e)} className={Style.select}>
                     <option value="All">All types</option>
