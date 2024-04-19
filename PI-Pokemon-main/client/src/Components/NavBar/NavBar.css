@@ -1,25 +1,19 @@
 .active {
-   
-    font-family: "Quicksand", sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    text-decoration: solid;
-    color:#DE2027;
-    
-    
-  
+   font-family: "Quicksand", sans-serif;
+   font-weight: 600;
+   font-size: 15px;
+   text-decoration: solid;
+   color:#DE2027;
 }
+   
 .pending {
-   
-    font-family: "Quicksand", sans-serif;
-   
-    font-weight:500;
-   
-    font-size: 15px;
-    color: #909091;
-text-decoration: none;
-
+   font-family: "Quicksand", sans-serif;
+   font-weight:500;
+   font-size: 15px;
+   color: #909091;
+   text-decoration: none;
 }
+   
 
 
 .link:hover{

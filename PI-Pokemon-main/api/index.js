@@ -21,13 +21,12 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const PORT = process.env.PORT || 3001;
 
-// Syncing all the models at once.
+// CREE UNA VARIABLE EN ENV.
 conn.sync({ force: true }).then(() => {
   server.listen(PORT, () => {
     
 
-      console.log("%s" + PORT); // eslint-disable-line no-console
+      console.log("ESCUCHANDO EN EL " + PORT); // eslint-disable-line no-console
   
-    console.log("%s listening at PORT"); // eslint-disable-line no-console
   });
 });

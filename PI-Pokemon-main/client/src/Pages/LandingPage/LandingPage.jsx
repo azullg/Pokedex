@@ -16,12 +16,12 @@ function LandingPage() {
     return  <div className={Style.conteiner}>
              
             <img  className={Style.img} src="https://i.pinimg.com/originals/15/3c/fb/153cfb7dcfb406a368a3dc4e35e37efb.gif" alt="" />
-            <Link to = '/home' className={Style.link} >  <button className={Style.botton} > GO </button></Link>
-               
+                <Link to = '/home' className={Style.link} >  <button className={Style.botton} > GO </button></Link>
             </div>
 
-}
-        
+    }
 export default LandingPage
+        
+               
 
     

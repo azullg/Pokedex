@@ -6,11 +6,9 @@ const { Pokemon, Type } = require('../db.js');
 
 const router = Router();
 
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
 
 
-// obtener todos los pokemons de la api (20)
+// obtener todos los pokemons de la api
 
 const pokeLoad = async (url) => {
   try {
@@ -21,26 +19,16 @@ const pokeLoad = async (url) => {
   }
 };
 
-const pokeNameUrl = async (pokeArray, pokeCant, resultApi) => {
-  try {
-    while (pokeArray.length < pokeCant) {
-      pokeArray = pokeArray.concat(resultApi.results);
-      resultApi = await pokeLoad(resultApi.next);
-    }
-    return pokeArray;
-  } catch (error) {
-    return { error: 'Error in map pokeArray' };
-  }
-};
 
+//trer toda la info
 const getApiInfo = async () => {
   try {
     let pokeArray = [];
     const pokeCant = 100;
     let resultApi = await pokeLoad('https://pokeapi.co/api/v2/pokemon');
-
+    
     pokeArray = await pokeNameUrl(pokeArray, pokeCant, resultApi);
-
+    
     const pokemons = pokeArray.map(async (poke) => {
       const pokeData = await axios(poke.url).then((pokeData) => {
         const pokemon = {
@@ -73,30 +61,20 @@ const getApiInfo = async () => {
   }
 };
 
-// const getApiInfo = async () => {
-//     const apiUrl = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20");
-//     const results = apiUrl.data.results
+//nombre url
+const pokeNameUrl = async (pokeArray, pokeCant, resultApi) => {
+  try {
+    while (pokeArray.length < pokeCant) {
+      pokeArray = pokeArray.concat(resultApi.results);
+      resultApi = await pokeLoad(resultApi.next);
+    }
+    return pokeArray;
+  } catch (error) {
+    return { error: 'Error in map pokeArray' };
+  }
+};
 
-//     const pokemonInfo = []
-    
-//     for(let i = 0 ; i < results.length ; i++){
-//       const pokes = await axios.get(results[i].url);
-//       const pokeInfo = pokes.data;
 
-//       pokemonInfo.push({
-//         id: pokeInfo.id,
-//         name: pokeInfo.name,
-//         types: pokeInfo.types.map((t) => t.type.name),
-//         image: pokeInfo.sprites.other.dream_world.front_default,
-//         attack: pokeInfo.stats[1].base_stat,
-//         weight: pokeInfo.weight,
-//         height: pokeInfo.height,
-//         defense: pokeInfo.defense
-//       });
-//     }
-    
-//     return pokemonInfo;
-// }
 
 // obtener los pokemon de la BD
 const getDbInfo = async () => {
@@ -118,6 +96,8 @@ const getDbInfo = async () => {
   
   return data
 }
+
+
 
 // concatenar los pokemon de la api y BD
 const getAllPokemons = async () => {
@@ -180,9 +160,25 @@ const getPokeInfoxName = async (name) => {
   }
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//RUTAS
+
 // ruta get
+
+//RUTA DE POKEMONES
 router.get("/pokemons", async (req, res) => {
-  console.log('here');
   const name = req.query.name;
 
   if (name) {
@@ -207,6 +203,7 @@ router.get("/pokemons", async (req, res) => {
   }
 });
 
+//RUTA DE TYPES
 router.get('/types', async (req, res) => {
   try {
   const typesApi = await axios.get("https://pokeapi.co/api/v2/type");
@@ -224,6 +221,9 @@ router.get('/types', async (req, res) => {
 catch(error) {
   return { error: 'No types response from api'}
 }})
+
+
+//POST
 
 router.post('/pokemons', async (req, res) => {
   const { 
@@ -259,6 +259,8 @@ router.post('/pokemons', async (req, res) => {
   return res.send('Pokemon created successfuly')
 })
 
+
+//GET ID
 router.get('/pokemons/:idPokemon', async (req, res) => {
   const { idPokemon } = req.params
   

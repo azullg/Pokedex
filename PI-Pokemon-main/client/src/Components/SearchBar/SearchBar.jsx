@@ -7,7 +7,7 @@ import Style from './SearchBar.module.css'
 import img2 from '../../Img/1-03.png'
 
 
-function SearchBar (){
+export default function SearchBar (){
     const dispatch = useDispatch()
     const [ name, setName ] = useState("")
 
@@ -24,16 +24,15 @@ function SearchBar (){
         }
     }
 
+    return(
+        <div>
+            <form className={Style.conteiner } onSubmit={(e)=> handleSubmit(e)}>
+            
+            <input className={Style.input}  type="text"  value = {name} onChange={(e) => handleInputChange(e)} placeholder="Pokemon name ..."/>
+            <button className={Style.button} type="submit" > <img src={img2} className={Style.img}/> </button>
+            </form>
+        </div>
+    )
+    }
     
-return(
-    <div>
-        <form className={Style.conteiner } onSubmit={(e)=> handleSubmit(e)}>
-        
-        <input className={Style.input}  type="text"  value = {name} onChange={(e) => handleInputChange(e)} placeholder="Pokemon name ..."/>
-        <button className={Style.button} type="submit" > <img src={img2} className={Style.img}/> </button>
-        </form>
-    </div>
-)
-}
 
-export default SearchBar

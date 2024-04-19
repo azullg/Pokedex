@@ -108,20 +108,15 @@ function  HomePAge () {
 
         </div>
 
-                {/*paginando*/}
+        {/*paginando*/}
                 <Paginado
-                                pokemonsPerPage={pokemonsPerPage}
-                                allPokemons = {allPokemons.length}
-                                paginado={paginado}
-                                page={currentPage}
+                    pokemonsPerPage={pokemonsPerPage}
+                    allPokemons = {allPokemons.length}
+                    paginado={paginado}
+                    page={currentPage}
                             />
 
-
-
-
-            
-
-{/*texto alternaivo*/}
+        {/*texto alternaivo*/}
             <div  className={Style.conteinerPaginando}>
             {   currentPokemons.length ? 
                 typeof currentPokemons[0] === 'object' ?
@@ -147,14 +142,19 @@ function  HomePAge () {
                 </div>
                 :
                 <div > 
-                  
                     <p  className={Style.textAlt}>Loading Pokedex ...</p>
                 </div>
             }
             </div>
-
-
         </div>
+
+
+
+
+            
+
+
+                  
 
        
 

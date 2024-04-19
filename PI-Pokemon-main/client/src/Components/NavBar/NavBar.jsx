@@ -12,13 +12,13 @@ import img5 from '../../Img/Untitled-1-04.png'
 export default function NavBar (){
 
     return(
-        <div className={Style.conteiner}>
+    <div className={Style.conteiner}>
        
-           <div >
-            <img className={Style.img} src="https://i.pinimg.com/originals/15/3c/fb/153cfb7dcfb406a368a3dc4e35e37efb.gif" alt="" />
-
+           <div>
+                <img className={Style.img} src="https://i.pinimg.com/originals/15/3c/fb/153cfb7dcfb406a368a3dc4e35e37efb.gif" alt="" />
            </div>
-<div className={Style.conteinerLinks}>
+
+        <div className={Style.conteinerLinks}>
            <div className={Style.navRotes}>
            <NavLink 
                 to = '/home'
@@ -33,30 +33,30 @@ export default function NavBar (){
                 <p></p>
             </NavLink>
            
-
             <NavLink 
                 to = '/'
                 className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "pending"}>
                 <p> Exit</p>
             </NavLink>
 
+        </div>
 
-            </div>
-           
-           <div className={Style.navLinks}>
-                <img src={img1} className={Style.navLinksImg} alt="" />
+        <div className={Style.navLinks}>
+         <img src={img1} className={Style.navLinksImg} alt="" />
                 <img src={img2} className={Style.navLinksImg} alt="" />
                 <img src={img3} className={Style.navLinksImg} alt="" />
                 <img src={img4} className={Style.navLinksImg} alt="" />
                 <img src={img5} className={Style.navLinksImg} alt="" />
-                
-           </div>
-            
-      
-           </div>
-        
+        </div>
 
         </div>
+    </div>
     )
 }
+        
+           
+                
+            
+      
+
     

@@ -64,34 +64,34 @@ const DetailPage = (props) => {
                         
                        
                                 <span className={style.pokestats}>{myPokemon[0].hp} Hp</span>
-                       
                                 <span className={style.pokestats}>{myPokemon[0].attack} Attack</span>
-                     
                                 <span className={style.pokestats}>{myPokemon[0].defense} Defense</span>
-                     
                                 <span className={style.pokestats}>{myPokemon[0].speed} Speed</span>
-                        
                                 <span className={style.pokestats}>{myPokemon[0].weight / 10} kg</span>                               
-
                                 <span className={style.pokestats}>{myPokemon[0].height / 10} m</span>
                        
-                                </div>
-                            <div className={style.button}>
-                            <Link to='/home' >Back</Link>
-                            </div>   
-                        
-
-
+                    </div>
                      
-                    </div>
-                    </div>
-               :
-                <div className={style.loading}> 
-                    <p className={style.loadingtext}>Loading...</p>
+                    <div className={style.button}>
+                        <Link to='/home' >Back</Link>
+                    </div>   
                 </div>
-                         }
+            </div>
+            :
+            <div className={style.loading}> 
+                <p className={style.loadingtext}>Loading...</p>
+            </div>
+                     }
         </div>
         
     )
 }
+                     
+                        
+
+                       
+                        
+
+
+                     
 export default DetailPage;

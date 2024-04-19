@@ -1,12 +1,15 @@
 import React from 'react';
 import Style from './Card.module.css'
+
 import imh from '../../Img/alt-01.png'
 import { Link } from 'react-router-dom';
+
+
 export default function Card({ name, types, image, id, weight, height, attack}){
 
 
     
-
+//COMPONENTE CARDS
     return(
         <div className={Style.conteiner}  >
             <div className={Style.img1}>
@@ -22,22 +25,22 @@ export default function Card({ name, types, image, id, weight, height, attack}){
                 }
             )
         }
-        
-        
             </div>         
-        
-            
         
             <div >
             <Link to={`home/${id}`}  className={Style.h1card} >{name.charAt(0).toUpperCase() + name.slice(1)}</Link>
             </div>           
-
+        
         </div>
             
                
         )
     }
                     
+        
+        
+            
+
 
 
                             

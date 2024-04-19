@@ -7,14 +7,15 @@ import Style from './Form.module.css'
 import validate from "./validation"
 import swal from 'sweetalert';
 
-function Form(){
+export default function Form(){
     const dispatch = useDispatch();
-    const types = useSelector(state => state.types)
+   
     const pokemons = useSelector(state => state.allPokemons.map( pok => pok.name))
    
 
     const [errors, setErrors] = useState({})
     const [section, setSection] = useState(1);
+    
     const [input, setInput] = useState({
         name: '',
         hp: '',
@@ -87,30 +88,30 @@ return <div className={Style.conteiner}>
     </div>
 
 
-<div>
+    <div>
        
         <form  className={Style.form} onSubmit={ (e) => handleSubmit(e)}>
+            <div>
+                <h1 className={Style.title}>New Pokemon</h1>
+            </div>   
 
         <div>
-         <h1 className={Style.title}>New Pokemon</h1>
-        </div>   
-        <div>
-        <div className={Style.inputDiv}>
-            <label className={Style.label}>Name Pokemon</label>
-            <input 
-                    type = 'text'  
-                    name = 'name' 
-                    value = {input.name} 
-                    onChange={(e) => handleChange(e) } 
-                    className = {errors.name ? Style.warning : Style.input}
-                />
-            {errors.name ? 
-            <span className={Style.error}>
-            {errors.name}</span>:null}
-        </div>
+            <div className={Style.inputDiv}>
+                <label className={Style.label}>Name Pokemon</label>
+                <input 
+                        type = 'text'  
+                        name = 'name' 
+                        value = {input.name} 
+                        onChange={(e) => handleChange(e) } 
+                        className = {errors.name ? Style.warning : Style.input}
+                    />
+                {errors.name ? 
+                <span className={Style.error}>
+                {errors.name}</span>:null}
+            </div>
         
 
-        <div className={Style.inputDiv}>   
+            <div className={Style.inputDiv}>   
                 <label  className={Style.label}>Hp:</label>
                 <input 
                     type="number"
@@ -125,10 +126,6 @@ return <div className={Style.conteiner}>
             {errors.hp ? <span className={Style.error}>{errors.hp}</span>:null}
             </div>
 
-                
-
-
-
             <div className={Style.inputDiv}>   
                 <label  className={Style.label}>Attack:</label>
                 <input 
@@ -142,8 +139,7 @@ return <div className={Style.conteiner}>
                 />
                 <label> {input.attack} </label>
                 {errors.attack  ? <span  className={Style.error}>{errors.attack }</span>:null}
-            </div>
-                
+             </div>
             <div className={Style.inputDiv}>   
                 <label className={Style.label} >Defense:</label>
                 <input 
@@ -157,8 +153,8 @@ return <div className={Style.conteiner}>
                 />
                 <label> {input.defense}</label>
                 {errors.defense ? <span className={Style.error}> {errors.defense}</span>:null}
-            </div>
-                 
+             </div>
+                
             <div className={Style.inputDiv}>   
                 <label className={Style.label} >Speed:</label>
                 <input 
@@ -173,8 +169,7 @@ return <div className={Style.conteiner}>
                 />
                 {errors.speed ? <span className={Style.error}>{errors.speed}</span>:null}
             </div>
-
-
+                
             <div className={Style.inputDiv}>   
                 <label className={Style.label} >Weight</label>
                 <input
@@ -185,8 +180,6 @@ return <div className={Style.conteiner}>
                     className = { Style.input }
                     />
             </div>
-                
-               
 
             <div className={Style.inputDiv}>   
                 <label className={Style.label} >Height</label>
@@ -199,26 +192,33 @@ return <div className={Style.conteiner}>
                 />
                  
             </div>
-            <div className={Style.inputDiv}>
 
-</div>
-<div className={Style.divButton}>
-            <button  className= {Style.button} onClick={(e) => {handleSubmit(e)}} >Submit</button>
-
-            <Link to='/home' ><button className= {Style.button} >Back</button></Link>
+            <div className={Style.divButton}>
+                <button  className= {Style.button} onClick={(e) => {handleSubmit(e)}} >Submit</button>
+                <Link to='/home' ><button className= {Style.button} >Back</button></Link>
             </div>
-</div>            
 
+        </div>            
+
+    </form>
+    </div>
+ </div>
   
         
 
          
 
-        </form>
 
-        </div>
 
-    </div>
+
+
+                 
+
+
+                
+               
+
+        
 }
 
-export default Form
+

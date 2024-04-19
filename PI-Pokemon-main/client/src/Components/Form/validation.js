@@ -7,7 +7,7 @@ export default function validate(input, pokemons){
     if(!input.name){
         errors.name = 'A name is required'
     }
-    if(pokemons.indexOf( input.name ) !== -1){
+    if(pokemons.indexOf(input.name) !== -1){
         errors.name = 'A pokemon with that name is already existing'
     }
     if(!RegExpression.test(input.name)){
@@ -66,11 +66,5 @@ export default function validate(input, pokemons){
         } 
     }
 
- 
-    if(input.types.length > 2){
-        errors.types = `You can't choose more than 2 types per Pokemon`
-    }
-
-    
     
     return errors;}

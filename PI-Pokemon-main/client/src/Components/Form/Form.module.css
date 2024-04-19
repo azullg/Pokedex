@@ -43,17 +43,14 @@
     font-size: 15px;
     text-align: center;
   
-
-  
+ 
 }
+
 .inputDiv{
     height: 45px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    
-
-
 
 }
 .label {
@@ -75,13 +72,13 @@
     background-color: #F7F7F9;
     font-family: "Quicksand", sans-serif;
     font-weight:400;
-    
     color: #2F204F;
     font-size: 15px;
     text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 0px;
   
+    
 }
 .error{
     font-size: 12px;
